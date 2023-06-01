@@ -1,2 +1,2 @@
 # polyWorks
-C++ and OpenGL learning with Code::Blocks
+C++ and OpenGL learning with different IDEs
