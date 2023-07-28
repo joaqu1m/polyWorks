@@ -8,5 +8,5 @@ int main()
     return 0;
 }
 
-// Ctrl Shift B pra buildar
-// .\hello no terminal para rodar
+// Ctrl Shift B ou "g++ hello.cpp" pra buildar
+// ".\hello" ou "hello.exe"
