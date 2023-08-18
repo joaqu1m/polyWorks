@@ -9,5 +9,11 @@ int main() {
     int numeroEscolhido;
     // 1. formatação 2. variavel
     scanf("%d", &numeroEscolhido);
-    printf("varTeste foi de %d e numeroEscolhido foi de %d \n", variavelTeste, numeroEscolhido);
+
+    if (numeroEscolhido == variavelTeste) {
+        printf("Voce acertou");
+    } else {
+        printf("Voce errou");
+    }
+    printf("\nvarTeste foi de %d e numeroEscolhido foi de %d \n", variavelTeste, numeroEscolhido);
 }
