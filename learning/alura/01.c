@@ -1,19 +1,32 @@
 #include <stdio.h>
 
+#define NUMERO_TENTATIVAS 10
+
 int main() {
-    printf("apenas compilando meu codigo com gcc 01.c -o 01.exe\n");
 
-    int variavelTeste = 40;
-    printf("variavelTeste e %d \n", variavelTeste);
+    printf("Voce tem um total de %d tentativas", NUMERO_TENTATIVAS);
 
-    int numeroEscolhido;
-    // 1. formatação 2. variavel
-    scanf("%d", &numeroEscolhido);
+    int numeroDesejado = 20;
 
-    if (numeroEscolhido == variavelTeste) {
-        printf("Voce acertou");
-    } else {
-        printf("Voce errou");
+    int i = 0;
+    while (i < NUMERO_TENTATIVAS) {
+        i++;
+        printf("\r\nTentativa numero %d:\r\n", i);
+
+        int numeroEscolhido;
+        // 1. formatação 2. variavel
+        scanf("%d", &numeroEscolhido);
+
+        if(numeroEscolhido < 0) {
+            printf("\r\nSem numeros negativos");
+            i--;
+        } else if(numeroEscolhido > numeroDesejado) {
+            printf("\r\nChutou alto");
+        } else if (numeroEscolhido < numeroDesejado) {
+            printf("\r\nChutou baixo");
+        } else {
+            printf("\r\nVoce venceu o jogo");
+            break;
+        }
     }
-    printf("\nvarTeste foi de %d e numeroEscolhido foi de %d \n", variavelTeste, numeroEscolhido);
 }
