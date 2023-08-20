@@ -2,15 +2,19 @@
 // Created by Joaqu on 8/19/2023.
 //
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 #define NUMERO_TENTATIVAS 10
 
 int main() {
 
-    printf("Voce tem um total de %d tentativas", NUMERO_TENTATIVAS);
+    printf("Voce tem um total de %d tentativas para acertar o numero secreto de 1 a 100", NUMERO_TENTATIVAS);
 
-    int numeroDesejado = 20;
     double pontuacao = 1000;
+
+    srand(time(0));
+    int numeroDesejado = (rand() % 100) + 1;
 
     int i = 0;
     while (i < NUMERO_TENTATIVAS) {
