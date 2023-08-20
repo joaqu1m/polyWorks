@@ -1,3 +1,6 @@
+//
+// Created by Joaqu on 8/19/2023.
+//
 #include <stdio.h>
 
 #define NUMERO_TENTATIVAS 10
@@ -7,6 +10,7 @@ int main() {
     printf("Voce tem um total de %d tentativas", NUMERO_TENTATIVAS);
 
     int numeroDesejado = 20;
+    double pontuacao = 1000;
 
     int i = 0;
     while (i < NUMERO_TENTATIVAS) {
@@ -17,15 +21,18 @@ int main() {
         // 1. formatação 2. variavel
         scanf("%d", &numeroEscolhido);
 
+        printf("\r\n");
         if(numeroEscolhido < 0) {
-            printf("\r\nSem numeros negativos");
+            printf("Sem numeros negativos");
             i--;
         } else if(numeroEscolhido > numeroDesejado) {
-            printf("\r\nChutou alto");
+            pontuacao -= (numeroEscolhido - numeroDesejado) / 2.0;
+            printf("Chutou alto");
         } else if (numeroEscolhido < numeroDesejado) {
-            printf("\r\nChutou baixo");
+            pontuacao -= (numeroDesejado - numeroEscolhido) / 2.0;
+            printf("Chutou baixo");
         } else {
-            printf("\r\nVoce venceu o jogo");
+            printf("Voce venceu o jogo com a pontuacao de %.2f", pontuacao);
             break;
         }
     }

@@ -34,3 +34,6 @@
 *.exe
 *.dsym
 main
+
+*cmake-build-debug
+*.idea
