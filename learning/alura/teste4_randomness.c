@@ -2,8 +2,6 @@
 // Created by Joaqu on 8/20/2023.
 //
 
-// para compilar, use gcc teste4_randomness.c sem comandos adicionais
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

@@ -4,4 +4,5 @@ project(forca_c_project C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(forca_c_project
-        main.c)
+        main.c
+        forca.h)
